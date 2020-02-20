@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/bottom_navigation_item_background_colors">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="43dp"
+            android:layout_marginTop="7dp"
+            android:layout_height="21dp"
+            android:text="Назад"
+            android:textSize="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:background="@drawable/btn_drawable_detailed" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="17dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="112 228 предложений">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="17dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="от 18 000 до 10 702 805$">
+            </TextView>
+        </LinearLayout>
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_width="23dp"
+            android:layout_marginStart="22dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sort"
+            android:background="#FFF">
+        </ImageButton>
+        <LinearLayout
+            android:layout_width="43dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/btn_find"
+            android:clickable="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="#FFF"
+                android:layout_marginTop="3dp"
+                android:text="Поиск"
+                android:textSize="8dp">
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                android:layout_gravity="center">
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

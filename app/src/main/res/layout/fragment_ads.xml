@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:id="@+id/typeCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/all_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:textColor="#FFF"
+            android:fontFamily="@font/roboto_bold"
+            android:textAllCaps="false"
+            android:background="@drawable/left_type_btn_select"
+            android:text="Все" />
+
+        <Button
+            android:id="@+id/new_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#B4B4B4"
+            android:textAllCaps="false"
+            android:background="@drawable/main_type_btn_no_select"
+            android:text="Новые" />
+
+        <Button
+            android:id="@+id/old_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:textAllCaps="false"
+            android:textColor="#B4B4B4"
+            android:background="@drawable/right_type_btn_no_select"
+            android:text="С пробегом" />
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/mark_model_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeCar"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        android:background="@drawable/marka_model_linear">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#A1A1A1"
+            android:text="Марка"
+            ></TextView>
+        <TextView
+            android:id="@+id/name_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#000"
+            android:text="Audi"
+            ></TextView>
+        <View
+            android:id="@+id/line1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="0.5px"
+            android:background="#C4C4C4"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </View>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#000"
+            android:background="@drawable/marka_model_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="Модель">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mark_model_ll"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:orientation="horizontal"
+        android:background="@drawable/marka_model_linear">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Добавить марку и модель"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/roboto_bold">
+        </TextView>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:src="@drawable/ic_plus"
+            android:background="#FFF"
+            ></ImageButton>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_layout"
+        android:text="Любой регион"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#735AF6"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="22dp">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegion"
+        android:paddingBottom="100dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Audi RS 5l (8T), 2011"
+            android:textColor="#000"
+            android:textSize="17dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:background="@drawable/price_tv_draw"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="1 150 000 $"
+            android:textColor="#FFF"
+            android:textSize="25dp"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/car_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"></androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:id="@+id/ll_moreInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="320000км"
+                    android:textColor="#000"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Чёрный"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 л / 137 л.с. / Бензин"
+                    android:textColor="#000"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Передний"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Механическая"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Седан"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_marginTop="10dp"
+                android:layout_height="0.5px"
+                android:background="#C4C4C4"
+                android:layout_width="match_parent">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Написать"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:textColor="#FFF"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/price_tv_draw">
+                </Button>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Позвонить"
+                    android:layout_marginStart="3dp"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/price_tv_draw">
+                </Button>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line3"
+                android:layout_marginTop="20dp"
+                android:layout_height="0.5px"
+                android:background="#C4C4C4"
+                android:layout_width="match_parent">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9A9A9A"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Омск"
+                    android:layout_weight="1">
+                </TextView>
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:background="#FFF"
+                    android:src="@drawable/add_like"></ImageButton>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

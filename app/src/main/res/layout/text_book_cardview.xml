@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFF">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="345dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp">
+    </ImageView>
+    <TextView
+        android:id="@+id/textHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Звоним"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#000"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="17dp">
+    </TextView>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="Какие вопросы задавать и что попросит у продавца"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#777777"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="15dp"
+        android:inputType="textMultiLine">
+    </TextView>
+
+</LinearLayout>
